@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/items",
+      "lambdaFunction": "restgraphqllambda",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/items"
+    }
+  ],
+  "resourceName": "restgraphqlapi",
+  "apiName": "restgraphqlapi",
+  "functionArns": [
+    {
+      "lambdaFunction": "restgraphqllambda"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-graphql-dev-32446-authRole",
+    "unAuthRoleName": "amplify-graphql-dev-32446-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "restgraphqllambda",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

@@ -1,8 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import Amplify from "aws-amplify";
-import './App.css'
-import Album from './storage/Album'
+import { API, graphqlOperation } from "aws-amplify";
+import "./App.css";
+import Album from "./storage/Album";
 //import Get2 from './storage/Get2'
+import { listTodos } from "./graphql/queries";
 Amplify.configure({
   Auth: {
     identityPoolId: "us-east-1:731158cd-a6b2-415b-90e3-b2444178e991", //REQUIRED - Amazon Cognito Identity Pool ID
@@ -16,16 +18,29 @@ Amplify.configure({
       region: "us-east-1", //OPTIONAL -  Amazon service region
     },
   },
+  API: {
+    aws_project_region: "us-east-1",
+    aws_appsync_graphqlEndpoint:
+      "https://d6kiluwqfna3raix5ebp3ebu2q.appsync-api.us-east-1.amazonaws.com/graphql",
+    aws_appsync_region: "us-east-1",
+    aws_appsync_authenticationType: "API_KEY",
+    aws_appsync_apiKey: "da2-po6bmwo5p5bzfmk4wvzs66a2wi",
+  },
 });
 export class App extends Component {
-    render() {
-        return (
-            <div>
-                <Album />
-                {/* <Get2 /> */}
-            </div>
-        )
-    }
+  async componentDidMount() {
+    //const todos = await API.graphql(graphqlOperation(listTodos));
+    //console.log(todos.data.listTodos.items);
+  }
+
+  render() {
+    return (
+      <div>
+        <Album />
+        {/* <Get2 /> */}
+      </div>
+    );
+  }
 }
 
-export default App
+export default App;

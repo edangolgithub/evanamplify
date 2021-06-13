@@ -1,0 +1,20 @@
+type Todo @model {
+  id: ID!
+  name: String!
+  description: String
+  priority: String
+}
+
+type User @model {
+  id: ID!
+  name: String!
+  description: String
+  priority: String
+}
+
+type Post @model {
+    id: ID!
+    title: String!
+    body:String!
+    createdAt:String!
+}
