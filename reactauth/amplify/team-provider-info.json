@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-reactauth-dev-30856-authRole",
+      "UnauthRoleArn": "arn:aws:iam::984648741180:role/amplify-reactauth-dev-30856-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::984648741180:role/amplify-reactauth-dev-30856-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-reactauth-dev-30856-deployment",
+      "UnauthRoleName": "amplify-reactauth-dev-30856-unauthRole",
+      "StackName": "amplify-reactauth-dev-30856",
+      "StackId": "arn:aws:cloudformation:us-east-1:984648741180:stack/amplify-reactauth-dev-30856/09e5be50-c419-11eb-a2f6-0a60596032c9",
+      "AmplifyAppId": "dptpgu1xor0xw"
+    },
+    "categories": {
+      "auth": {
+        "reactauthf253310b": {}
+      }
+    }
+  }
+}
